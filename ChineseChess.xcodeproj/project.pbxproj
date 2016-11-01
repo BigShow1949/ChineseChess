@@ -9,12 +9,19 @@
 /* Begin PBXBuildFile section */
 		18DCF1AF1DC898C70047EC7F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCF1AE1DC898C70047EC7F /* main.m */; };
 		18DCF1B21DC898C70047EC7F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCF1B11DC898C70047EC7F /* AppDelegate.m */; };
-		18DCF1B51DC898C70047EC7F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCF1B41DC898C70047EC7F /* ViewController.m */; };
 		18DCF1B81DC898C70047EC7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18DCF1B61DC898C70047EC7F /* Main.storyboard */; };
 		18DCF1BA1DC898C70047EC7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DCF1B91DC898C70047EC7F /* Assets.xcassets */; };
 		18DCF1BD1DC898C70047EC7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18DCF1BB1DC898C70047EC7F /* LaunchScreen.storyboard */; };
 		18DCF1C81DC898C70047EC7F /* ChineseChessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCF1C71DC898C70047EC7F /* ChineseChessTests.m */; };
 		18DCF1D31DC898C80047EC7F /* ChineseChessUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCF1D21DC898C80047EC7F /* ChineseChessUITests.m */; };
+		18DCF1F51DC898F20047EC7F /* Chess.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCF1E21DC898F20047EC7F /* Chess.m */; };
+		18DCF1F61DC898F20047EC7F /* House.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCF1E41DC898F20047EC7F /* House.m */; };
+		18DCF1F71DC898F20047EC7F /* Rook.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCF1E61DC898F20047EC7F /* Rook.m */; };
+		18DCF1F81DC898F20047EC7F /* Map.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCF1E91DC898F20047EC7F /* Map.m */; };
+		18DCF1F91DC898F20047EC7F /* House+rule.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCF1EC1DC898F20047EC7F /* House+rule.m */; };
+		18DCF1FA1DC898F20047EC7F /* Rook+rule.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCF1EE1DC898F20047EC7F /* Rook+rule.m */; };
+		18DCF1FB1DC898F20047EC7F /* Chess+Move.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCF1F11DC898F20047EC7F /* Chess+Move.m */; };
+		18DCF1FC1DC898F20047EC7F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DCF1F41DC898F20047EC7F /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +46,6 @@
 		18DCF1AE1DC898C70047EC7F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18DCF1B01DC898C70047EC7F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18DCF1B11DC898C70047EC7F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		18DCF1B31DC898C70047EC7F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		18DCF1B41DC898C70047EC7F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		18DCF1B71DC898C70047EC7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18DCF1B91DC898C70047EC7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18DCF1BC1DC898C70047EC7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +56,25 @@
 		18DCF1CE1DC898C70047EC7F /* ChineseChessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChineseChessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DCF1D21DC898C80047EC7F /* ChineseChessUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChineseChessUITests.m; sourceTree = "<group>"; };
 		18DCF1D41DC898C80047EC7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18DCF1E01DC898F20047EC7F /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Singleton.h; path = ../../../Downloads/WzxMyModelDemo/WZXMyDemo/Singleton.h; sourceTree = "<group>"; };
+		18DCF1E11DC898F20047EC7F /* Chess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chess.h; sourceTree = "<group>"; };
+		18DCF1E21DC898F20047EC7F /* Chess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chess.m; sourceTree = "<group>"; };
+		18DCF1E31DC898F20047EC7F /* House.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = House.h; sourceTree = "<group>"; };
+		18DCF1E41DC898F20047EC7F /* House.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = House.m; sourceTree = "<group>"; };
+		18DCF1E51DC898F20047EC7F /* Rook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rook.h; sourceTree = "<group>"; };
+		18DCF1E61DC898F20047EC7F /* Rook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rook.m; sourceTree = "<group>"; };
+		18DCF1E81DC898F20047EC7F /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
+		18DCF1E91DC898F20047EC7F /* Map.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Map.m; sourceTree = "<group>"; };
+		18DCF1EB1DC898F20047EC7F /* House+rule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "House+rule.h"; sourceTree = "<group>"; };
+		18DCF1EC1DC898F20047EC7F /* House+rule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "House+rule.m"; sourceTree = "<group>"; };
+		18DCF1ED1DC898F20047EC7F /* Rook+rule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Rook+rule.h"; sourceTree = "<group>"; };
+		18DCF1EE1DC898F20047EC7F /* Rook+rule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Rook+rule.m"; sourceTree = "<group>"; };
+		18DCF1F01DC898F20047EC7F /* Chess+Move.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Chess+Move.h"; path = "../../../Downloads/WzxMyModelDemo/WZXMyDemo/Chess+Move.h"; sourceTree = "<group>"; };
+		18DCF1F11DC898F20047EC7F /* Chess+Move.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Chess+Move.m"; path = "../../../Downloads/WzxMyModelDemo/WZXMyDemo/Chess+Move.m"; sourceTree = "<group>"; };
+		18DCF1F21DC898F20047EC7F /* Move.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Move.h; path = ../../../Downloads/WzxMyModelDemo/WZXMyDemo/Move.h; sourceTree = "<group>"; };
+		18DCF1F31DC898F20047EC7F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../../../Downloads/WzxMyModelDemo/WZXMyDemo/ViewController.h; sourceTree = "<group>"; };
+		18DCF1F41DC898F20047EC7F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../../../Downloads/WzxMyModelDemo/WZXMyDemo/ViewController.m; sourceTree = "<group>"; };
+		18DCF1FD1DC898F70047EC7F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +125,17 @@
 		18DCF1AC1DC898C70047EC7F /* ChineseChess */ = {
 			isa = PBXGroup;
 			children = (
+				18DCF1E01DC898F20047EC7F /* Singleton.h */,
+				18DCF1E71DC898F20047EC7F /* Chess */,
+				18DCF1EA1DC898F20047EC7F /* Map */,
+				18DCF1EF1DC898F20047EC7F /* Rule */,
+				18DCF1F01DC898F20047EC7F /* Chess+Move.h */,
+				18DCF1F11DC898F20047EC7F /* Chess+Move.m */,
+				18DCF1F21DC898F20047EC7F /* Move.h */,
+				18DCF1F31DC898F20047EC7F /* ViewController.h */,
+				18DCF1F41DC898F20047EC7F /* ViewController.m */,
 				18DCF1B01DC898C70047EC7F /* AppDelegate.h */,
 				18DCF1B11DC898C70047EC7F /* AppDelegate.m */,
-				18DCF1B31DC898C70047EC7F /* ViewController.h */,
-				18DCF1B41DC898C70047EC7F /* ViewController.m */,
 				18DCF1B61DC898C70047EC7F /* Main.storyboard */,
 				18DCF1B91DC898C70047EC7F /* Assets.xcassets */,
 				18DCF1BB1DC898C70047EC7F /* LaunchScreen.storyboard */,
@@ -117,6 +148,7 @@
 		18DCF1AD1DC898C70047EC7F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18DCF1FD1DC898F70047EC7F /* PrefixHeader.pch */,
 				18DCF1AE1DC898C70047EC7F /* main.m */,
 			);
 			name = "Supporting Files";
@@ -138,6 +170,42 @@
 				18DCF1D41DC898C80047EC7F /* Info.plist */,
 			);
 			path = ChineseChessUITests;
+			sourceTree = "<group>";
+		};
+		18DCF1E71DC898F20047EC7F /* Chess */ = {
+			isa = PBXGroup;
+			children = (
+				18DCF1E11DC898F20047EC7F /* Chess.h */,
+				18DCF1E21DC898F20047EC7F /* Chess.m */,
+				18DCF1E31DC898F20047EC7F /* House.h */,
+				18DCF1E41DC898F20047EC7F /* House.m */,
+				18DCF1E51DC898F20047EC7F /* Rook.h */,
+				18DCF1E61DC898F20047EC7F /* Rook.m */,
+			);
+			name = Chess;
+			path = ../../../Downloads/WzxMyModelDemo/WZXMyDemo;
+			sourceTree = "<group>";
+		};
+		18DCF1EA1DC898F20047EC7F /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				18DCF1E81DC898F20047EC7F /* Map.h */,
+				18DCF1E91DC898F20047EC7F /* Map.m */,
+			);
+			name = Map;
+			path = ../../../Downloads/WzxMyModelDemo/WZXMyDemo;
+			sourceTree = "<group>";
+		};
+		18DCF1EF1DC898F20047EC7F /* Rule */ = {
+			isa = PBXGroup;
+			children = (
+				18DCF1EB1DC898F20047EC7F /* House+rule.h */,
+				18DCF1EC1DC898F20047EC7F /* House+rule.m */,
+				18DCF1ED1DC898F20047EC7F /* Rook+rule.h */,
+				18DCF1EE1DC898F20047EC7F /* Rook+rule.m */,
+			);
+			name = Rule;
+			path = ../../../Downloads/WzxMyModelDemo/WZXMyDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,9 +344,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18DCF1B51DC898C70047EC7F /* ViewController.m in Sources */,
+				18DCF1F81DC898F20047EC7F /* Map.m in Sources */,
+				18DCF1F71DC898F20047EC7F /* Rook.m in Sources */,
+				18DCF1F51DC898F20047EC7F /* Chess.m in Sources */,
 				18DCF1B21DC898C70047EC7F /* AppDelegate.m in Sources */,
+				18DCF1FC1DC898F20047EC7F /* ViewController.m in Sources */,
+				18DCF1FA1DC898F20047EC7F /* Rook+rule.m in Sources */,
+				18DCF1F61DC898F20047EC7F /* House.m in Sources */,
+				18DCF1F91DC898F20047EC7F /* House+rule.m in Sources */,
 				18DCF1AF1DC898C70047EC7F /* main.m in Sources */,
+				18DCF1FB1DC898F20047EC7F /* Chess+Move.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +503,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 686TP5D9Q7;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ChineseChess/PrefixHeader.pch";
 				INFOPLIST_FILE = ChineseChess/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.BigShow1949.ChineseChess;
@@ -440,6 +517,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 686TP5D9Q7;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ChineseChess/PrefixHeader.pch";
 				INFOPLIST_FILE = ChineseChess/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.BigShow1949.ChineseChess;
