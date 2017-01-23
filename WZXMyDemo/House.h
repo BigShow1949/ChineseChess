@@ -10,6 +10,4 @@
 
 @interface House : Chess
 
-- (void)newChess;
-
 @end

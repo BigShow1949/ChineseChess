@@ -71,21 +71,12 @@
     {
         if ([view isKindOfClass:[Chess class]])
         {
-            //马
-            if ([view isKindOfClass:[House class]])
-            {
-                House * house = (House *)view;
-                if (house.isInAir == YES)
+            Chess * chess = (Chess *)view;
+            if (chess.isInAir) {
+                if ([chess canMoveToIndex:[NSIndexPath indexPathForRow:row inSection:line]])
                 {
-                    if ([house canMoveToIndex:[NSIndexPath indexPathForRow:row inSection:line]])
-                    {
-                        [house moveToIndex:[NSIndexPath indexPathForRow:row inSection:line]];
-                    }
+                    [chess moveToIndex:[NSIndexPath indexPathForRow:row inSection:line]];
                 }
-            }
-            else
-            {
-                
             }
         }
     }

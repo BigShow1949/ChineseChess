@@ -11,6 +11,9 @@
 
 @interface Chess : UIButton
 
+// 由子类实现
+- (BOOL)canMoveToIndex:(NSIndexPath *)index;
+
 /**
  *  棋子上的Label
  */

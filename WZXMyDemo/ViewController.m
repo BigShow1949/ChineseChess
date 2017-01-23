@@ -22,7 +22,6 @@
     [self.view addSubview:map];
     
     House * house = [[House alloc]initWithRowWidth:map.rowWidth andRowLine:[NSIndexPath indexPathForRow:5 inSection:5]];
-    [house newChess];
     [map addSubview:house];
 }
 

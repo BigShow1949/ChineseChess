@@ -10,9 +10,14 @@
 
 @implementation House
 
-- (void)newChess
+- (instancetype)initWithRowWidth:(CGFloat)rowWidth andRowLine:(NSIndexPath *)index
 {
-    self.categoryLabel.text = @"马";
+    if (self = [super initWithRowWidth:rowWidth andRowLine:index])
+    {
+        self.categoryLabel.text = @"马";
+    }
+    return self;
 }
+
 
 @end
