@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Map.h"
 #import "House.h"
+#import "Rook.h"
 @interface ViewController ()
 
 @end
@@ -23,6 +24,9 @@
     
     House * house = [[House alloc]initWithRowWidth:map.rowWidth andRowLine:[NSIndexPath indexPathForRow:5 inSection:5]];
     [map addSubview:house];
+    
+    Rook * rook = [[Rook alloc]initWithRowWidth:map.rowWidth andRowLine:[NSIndexPath indexPathForRow:3 inSection:5]];
+    [map addSubview:rook];
 }
 
 - (void)didReceiveMemoryWarning {

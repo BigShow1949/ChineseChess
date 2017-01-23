@@ -11,7 +11,7 @@
 
 @interface Chess : UIButton
 
-// 由子类实现
+// 由子类实现 而且子类必须实现(怎么提示?)
 - (BOOL)canMoveToIndex:(NSIndexPath *)index;
 
 /**

@@ -10,5 +10,5 @@
 
 @interface House (rule)
 
-- (BOOL)canMoveToIndex:(NSIndexPath *)index;
+//- (BOOL)canMoveToIndex:(NSIndexPath *)index;
 @end

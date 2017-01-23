@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1823B9221E360A0000F37390 /* Rook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1823B9211E360A0000F37390 /* Rook.m */; };
+		1823B9281E360A3000F37390 /* Rook+rule.m in Sources */ = {isa = PBXBuildFile; fileRef = 1823B9271E360A3000F37390 /* Rook+rule.m */; };
 		4B8106D81C72F8A0004EE23E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8106D71C72F8A0004EE23E /* main.m */; };
 		4B8106DB1C72F8A0004EE23E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8106DA1C72F8A0004EE23E /* AppDelegate.m */; };
 		4B8106DE1C72F8A0004EE23E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8106DD1C72F8A0004EE23E /* ViewController.m */; };
@@ -40,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1823B9201E360A0000F37390 /* Rook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rook.h; sourceTree = "<group>"; };
+		1823B9211E360A0000F37390 /* Rook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rook.m; sourceTree = "<group>"; };
+		1823B9261E360A3000F37390 /* Rook+rule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Rook+rule.h"; sourceTree = "<group>"; };
+		1823B9271E360A3000F37390 /* Rook+rule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Rook+rule.m"; sourceTree = "<group>"; };
 		4B8106D31C72F8A0004EE23E /* WZXMyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZXMyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B8106D71C72F8A0004EE23E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4B8106D91C72F8A0004EE23E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -167,6 +173,8 @@
 			children = (
 				4B8107191C731A0E004EE23E /* House+rule.h */,
 				4B81071A1C731A0E004EE23E /* House+rule.m */,
+				1823B9261E360A3000F37390 /* Rook+rule.h */,
+				1823B9271E360A3000F37390 /* Rook+rule.m */,
 			);
 			name = Rule;
 			sourceTree = "<group>";
@@ -187,6 +195,8 @@
 				4B81070A1C72F8DE004EE23E /* Chess.m */,
 				4B81070C1C72F931004EE23E /* House.h */,
 				4B81070D1C72F931004EE23E /* House.m */,
+				1823B9201E360A0000F37390 /* Rook.h */,
+				1823B9211E360A0000F37390 /* Rook.m */,
 			);
 			name = Chess;
 			sourceTree = "<group>";
@@ -324,7 +334,9 @@
 			files = (
 				4B81070B1C72F8DE004EE23E /* Chess.m in Sources */,
 				4B8107141C72FE70004EE23E /* Map.m in Sources */,
+				1823B9221E360A0000F37390 /* Rook.m in Sources */,
 				4B8106DE1C72F8A0004EE23E /* ViewController.m in Sources */,
+				1823B9281E360A3000F37390 /* Rook+rule.m in Sources */,
 				4B8106DB1C72F8A0004EE23E /* AppDelegate.m in Sources */,
 				4B81070E1C72F931004EE23E /* House.m in Sources */,
 				4B8106D81C72F8A0004EE23E /* main.m in Sources */,
