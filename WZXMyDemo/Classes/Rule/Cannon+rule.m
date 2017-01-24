@@ -35,7 +35,7 @@
         NSLog(@"-- 上");
         int count = 0;
         for (int i = toRow+1; i < fromRow; i++) {
-            if ([board isHaveChessRow:i section:fromLine]) {
+            if ([board chessOnRow:i section:fromLine]) {
                 count++;
             }
         }
@@ -47,7 +47,7 @@
         NSLog(@"-- 下");
         int count = 0;
         for (int i = fromRow+1; i < toRow; i++) {
-            if ([board isHaveChessRow:i section:fromLine]) {
+            if ([board chessOnRow:i section:fromLine]) {
                 count++;
             }
         }
@@ -58,7 +58,7 @@
         NSLog(@"-- 右");
         int count = 0;
         for (int i = fromLine+1; i < toLine; i++) {
-            if ([board isHaveChessRow:fromRow section:i]) {
+            if ([board chessOnRow:fromRow section:i]) {
                 count++;
             }
         }
@@ -69,7 +69,7 @@
         NSLog(@"-- 左");
         int count = 0;
         for (int i = toLine+1; i < fromLine; i++) {
-            if ([board isHaveChessRow:fromRow section:i]) {
+            if ([board chessOnRow:fromRow section:i]) {
                 count++;
             }
         }

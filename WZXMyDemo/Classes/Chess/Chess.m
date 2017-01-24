@@ -95,6 +95,7 @@
                     [self removeFromSuperview];
                 }];
             }
+            
         }
     }else {
         self.isInAir = YES;

@@ -67,7 +67,9 @@
     for (ClientObj *socket in self.arrayClient) {
          if (![clientSocket isEqual:socket.scocket]) {
              //群聊 发送给其他客户端
-             [self writeDataWithSocket:socket.scocket str:log];
+//             [self writeDataWithSocket:socket.scocket str:log];
+
+             [socket.scocket writeData:data withTimeout:-1 tag:0];
          }else{
              ///更新最新时间
              socket.timeNew = [NSDate date];

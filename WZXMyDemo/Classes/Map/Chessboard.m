@@ -15,6 +15,7 @@
 #import "King.h"
 #import "Cannon.h"
 #import "Mandarin.h"
+#import "Chess+Move.h"
 
 @implementation Chessboard
 singleton_implementation(Chessboard)
@@ -31,17 +32,18 @@ singleton_implementation(Chessboard)
 }
 
 
-- (BOOL)isHaveChessRow:(NSInteger)row section:(NSInteger)section {
+// - (BOOL)chessOnRow:(NSInteger)row section:(NSInteger)section
+- (Chess *)chessOnRow:(NSInteger)row section:(NSInteger)section {
     
     for (Chess *chess in self.chessArr) {
         
         if (chess.index.row == row && chess.index.section == section) {
             NSLog(@"有:%@", chess);
-            return YES;
+            return chess;
             break;
         }
     }
-    return NO;
+    return nil;
 }
 
 //- (void)setSelectedChess:(Chess *)selectedChess {
@@ -146,5 +148,13 @@ singleton_implementation(Chessboard)
 //    self.chessArr = [NSArray arrayWithArray:tempArr];
 //    tempArr = nil;
 //}
+
+- (void)moveIndex:(NSIndexPath *)fromIndex toIndex:(NSIndexPath *)toIndex {
+
+    Chess *chess = [self chessOnRow:fromIndex.row section:fromIndex.section];
+    if (chess) {
+        [chess moveToIndex:toIndex completion:nil];
+    }
+}
 
 @end

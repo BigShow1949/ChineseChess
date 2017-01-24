@@ -9,7 +9,7 @@
 #import "MessageManager.h"
 #import "GCDAsyncSocket.h"
 
-#import "MBProgressHUD+YF.h"
+#import "Chessboard.h"
 
 @interface MessageManager()<GCDAsyncSocketDelegate>
 @property(nonatomic,strong)GCDAsyncSocket *socket;
@@ -20,11 +20,11 @@
 singleton_implementation(MessageManager)
 
 - (void)sendMessageMoveIndex:(NSIndexPath *)fromIndex toIndex:(NSIndexPath *)toIndex {
-    NSDictionary *dict = @{@"code" : @"1000",
-                           @"data" : @{@"fromIndexRow"    : @"2",
-                                       @"fromIndexSection": @"2",
-                                       @"toIndexRow"      : @"2",
-                                       @"toIndexSection"  : @"2"}};
+    NSDictionary *dict = @{@"code" : @(1000),
+                           @"data" : @{@"fromIndexRow"    : @(fromIndex.row),
+                                       @"fromIndexSection": @(fromIndex.section),
+                                       @"toIndexRow"      : @(toIndex.row),
+                                       @"toIndexSection"  : @(toIndex.section)}};
     NSData *data = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:nil];
     [self.socket writeData:data withTimeout:-1 tag:0];
 }
@@ -32,13 +32,32 @@ singleton_implementation(MessageManager)
 #pragma GCDAsyncSocketDelegate
 // 接受数据
 - (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag{
-    NSString *dataStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     
-    NSLog(@"%@",dataStr);
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        
+//        Chessboard *board = [Chessboard sharedChessboard];
+//        [board moveIndex:[NSIndexPath indexPathForRow:7 inSection:1] toIndex:[NSIndexPath indexPathForRow:7 inSection:0]];
+//    });
+    
+    NSLog(@"----1");
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+    NSLog(@"%@", dict);
+    NSNumber *code = dict[@"code"];
+    if (code.intValue == 1000) {
+        
+        NSDictionary *data = dict[@"data"];
+        NSNumber *fromIndexRow     = data[@"fromIndexRow"];
+        NSNumber *fromIndexSection = data[@"fromIndexSection"];
+        NSNumber *toIndexRow       = data[@"toIndexRow"];
+        NSNumber *toIndexSection   = data[@"toIndexSection"];
 
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [MBProgressHUD showMessage:dataStr];
-    });
+        NSIndexPath *fromIndex = [NSIndexPath indexPathForRow:fromIndexRow.integerValue inSection:fromIndexSection.integerValue];
+        NSIndexPath *toIndex = [NSIndexPath indexPathForRow:toIndexRow.integerValue inSection:toIndexSection.integerValue];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            Chessboard *board = [Chessboard sharedChessboard];
+            [board moveIndex:fromIndex toIndex:toIndex];
+        });
+    }
     [sock readDataWithTimeout:-1 tag:0];
 }
 
@@ -85,7 +104,7 @@ singleton_implementation(MessageManager)
 
     if (!_socket) {
         GCDAsyncSocket *socket = [[GCDAsyncSocket alloc]initWithDelegate:self delegateQueue:dispatch_get_global_queue(0, 0)];
-        [socket connectToHost:@"10.100.70.93" onPort:8088 error:nil];
+        [socket connectToHost:@"10.100.60.4" onPort:8088 error:nil];
         _socket = socket;
     }
     return _socket;

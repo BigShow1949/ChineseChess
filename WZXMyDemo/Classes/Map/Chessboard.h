@@ -18,8 +18,11 @@ singleton_interface(Chessboard)
 
 @property (nonatomic, strong) NSMutableArray<Chess *> *chessArr;
 
-- (BOOL)isHaveChessRow:(NSInteger)row section:(NSInteger)section;
+- (Chess *)chessOnRow:(NSInteger)row section:(NSInteger)section;
 
 - (void)initChessboard;
+
+
+- (void)moveIndex:(NSIndexPath *)fromIndex toIndex:(NSIndexPath *)toIndex;
 
 @end

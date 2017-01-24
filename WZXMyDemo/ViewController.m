@@ -23,6 +23,7 @@
     
     [board initChessboard];
     
+
     
     NSLog(@"count = %d", board.chessArr.count);
 }

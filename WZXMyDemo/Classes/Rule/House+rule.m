@@ -22,22 +22,22 @@
     Chessboard *board = [Chessboard sharedChessboard];
     
     if ( (toRow - fromRow) == -2 && ABS(toLine - fromLine) == 1) { // 上
-        if ([board isHaveChessRow:fromRow-1 section:fromLine]) {
+        if ([board chessOnRow:fromRow-1 section:fromLine]) {
             return NO;
         }
         return YES;
     }else if ((toRow - fromRow) == 2 && ABS(toLine - fromLine) == 1) { // 下
-        if ([board isHaveChessRow:fromRow+1 section:fromLine]) {
+        if ([board chessOnRow:fromRow+1 section:fromLine]) {
             return NO;
         }
         return YES;
     }else if (ABS(toRow - fromRow) == 1 && (toLine - fromLine) == -2) { // 左
-        if ([board isHaveChessRow:fromRow section:fromLine-1]) {
+        if ([board chessOnRow:fromRow section:fromLine-1]) {
             return NO;
         }
         return YES;
     }else if (ABS(toRow - fromRow) == 1 && (toLine - fromLine) == 2) { // 右
-        if ([board isHaveChessRow:fromRow section:fromLine+1]) {
+        if ([board chessOnRow:fromRow section:fromLine+1]) {
             return NO;
         }
         return YES;
