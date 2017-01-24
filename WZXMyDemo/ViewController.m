@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "Map.h"
+#import "Chessboard.h"
 #import "House.h"
 #import "Rook.h"
 @interface ViewController ()
@@ -19,14 +19,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    Map * map = [[Map alloc]initWithStartPt:CGPointMake(20, 60) andRowWidth:(self.view.frame.size.width - 20 * 2)/8.0];
-    [self.view addSubview:map];
+    Chessboard * board = [[Chessboard alloc]initWithStartPt:CGPointMake(20, 60) andRowWidth:(self.view.frame.size.width - 20 * 2)/8.0];
+    [self.view addSubview:board];
     
-    House * house = [[House alloc]initWithRowWidth:map.rowWidth andRowLine:[NSIndexPath indexPathForRow:5 inSection:5]];
-    [map addSubview:house];
+    House * house2 = [[House alloc]initWithRowWidth:board.rowWidth andRowLine:[NSIndexPath indexPathForRow:3 inSection:4]];
+    [board addSubview:house2];
+    [board.chessArr addObject:house2];
     
-    Rook * rook = [[Rook alloc]initWithRowWidth:map.rowWidth andRowLine:[NSIndexPath indexPathForRow:3 inSection:5]];
-    [map addSubview:rook];
+    House * house = [[House alloc]initWithRowWidth:board.rowWidth andRowLine:[NSIndexPath indexPathForRow:5 inSection:3]];
+    [board addSubview:house];
+    [board.chessArr addObject:house];
+    
+    Rook * rook = [[Rook alloc]initWithRowWidth:board.rowWidth andRowLine:[NSIndexPath indexPathForRow:4 inSection:3]];
+    [board addSubview:rook];
+    [board.chessArr addObject:rook];
+    
+    NSLog(@"count = %d", board.chessArr.count);
 }
 
 - (void)didReceiveMemoryWarning {

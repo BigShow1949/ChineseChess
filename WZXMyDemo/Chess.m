@@ -7,6 +7,8 @@
 //
 
 #import "Chess.h"
+#import "Chessboard.h"
+
 
 @implementation Chess
 
@@ -14,7 +16,6 @@
 {
     if (self = [super init])
     {
-        _isRed = YES;
         
         _isInAir = NO;
         
@@ -30,16 +31,17 @@
         //列
         NSInteger line = index.section;
         
-        if (row > 5)
+        if (row > 4)
         {
-            self.frame = CGRectMake(row * rowWidth - rowWidth/2.0 , line * rowWidth - rowWidth/2.0 + rowWidth, rowWidth, rowWidth);
+            self.frame = CGRectMake(line * rowWidth - rowWidth/2.0, row * rowWidth - rowWidth/2.0, rowWidth, rowWidth);
+            _isRed = YES;
         }
         else
         {
-            self.frame = CGRectMake(row * rowWidth - rowWidth/2.0, line * rowWidth - rowWidth/2.0,rowWidth, rowWidth);
+            self.frame = CGRectMake(line * rowWidth - rowWidth/2.0, row * rowWidth - rowWidth/2.0, rowWidth, rowWidth);
+            _isRed = NO;
         }
         
-        NSLog(@"%@",NSStringFromCGRect(self.frame));
         self.categoryLabel = ({
         
             UILabel * categoryLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, rowWidth, rowWidth)];
@@ -70,10 +72,25 @@
 
 - (void)btnClick:(UIButton *)sender
 {
+    Chessboard *board = [Chessboard sharedChessboard];
+    
     self.isInAir = !self.isInAir;
     
+    if (self.isInAir) {
+        if (board.selectedChess) {
+            board.selectedChess.isInAir = NO;
+        }
+        board.selectedChess = self;
+    }else {
+        board.selectedChess = nil;
+    }
+}
+
+- (void)setIsInAir:(BOOL)isInAir {
+
+    _isInAir = isInAir;
     
-    if (self.isInAir == YES)
+    if (isInAir)
     {
         self.categoryLabel.backgroundColor = [UIColor blackColor];
     }
@@ -81,8 +98,6 @@
     {
         self.categoryLabel.backgroundColor = [UIColor whiteColor];
     }
-    
-    NSLog(@"%@",_isInAir == YES?@"拿起":@"放下");
 }
 
 - (void)setIsRed:(BOOL)isRed
@@ -91,5 +106,16 @@
     _categoryLabel.textColor = _isRed == YES ? [UIColor redColor] : [UIColor blackColor];
 }
 
+// 由子类实现 而且子类必须实现(怎么提示?)
+- (BOOL)canMoveToIndex:(NSIndexPath *)index
+{
+    return NO;
+}
 
+
+
+- (NSString *)description {
+
+    return [NSString stringWithFormat:@"%@", self.categoryLabel.text];
+}
 @end

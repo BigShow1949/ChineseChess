@@ -7,6 +7,7 @@
 //
 
 #import "Chess+Move.h"
+#import "Chessboard.h"
 
 @implementation Chess (Move)
 
@@ -31,9 +32,12 @@
         completion:^(BOOL finished)
        {
                          
-             self.isInAir = NO;
-             self.categoryLabel.backgroundColor = [UIColor whiteColor];
-             self.index = index;
+            self.isInAir = NO;
+            self.categoryLabel.backgroundColor = [UIColor whiteColor];
+            self.index = index;
+           
+           Chessboard *board = [Chessboard sharedChessboard];
+           board.selectedChess = nil;
            
        }];
 }

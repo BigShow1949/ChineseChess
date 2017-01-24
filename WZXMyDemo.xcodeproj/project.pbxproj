@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1823B9221E360A0000F37390 /* Rook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1823B9211E360A0000F37390 /* Rook.m */; };
 		1823B9281E360A3000F37390 /* Rook+rule.m in Sources */ = {isa = PBXBuildFile; fileRef = 1823B9271E360A3000F37390 /* Rook+rule.m */; };
+		18CE20561E36F3EE00BA57DB /* Chessboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE20551E36F3EE00BA57DB /* Chessboard.m */; };
+		18CE20591E37073600BA57DB /* Pawn.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE20581E37073600BA57DB /* Pawn.m */; };
+		18CE205C1E37077500BA57DB /* Pawn+rule.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE205B1E37077500BA57DB /* Pawn+rule.m */; };
 		4B8106D81C72F8A0004EE23E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8106D71C72F8A0004EE23E /* main.m */; };
 		4B8106DB1C72F8A0004EE23E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8106DA1C72F8A0004EE23E /* AppDelegate.m */; };
 		4B8106DE1C72F8A0004EE23E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8106DD1C72F8A0004EE23E /* ViewController.m */; };
@@ -46,6 +49,14 @@
 		1823B9211E360A0000F37390 /* Rook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rook.m; sourceTree = "<group>"; };
 		1823B9261E360A3000F37390 /* Rook+rule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Rook+rule.h"; sourceTree = "<group>"; };
 		1823B9271E360A3000F37390 /* Rook+rule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Rook+rule.m"; sourceTree = "<group>"; };
+		18CE204F1E36EA6800BA57DB /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		18CE20501E36EB0500BA57DB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		18CE20541E36F3EE00BA57DB /* Chessboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chessboard.h; sourceTree = "<group>"; };
+		18CE20551E36F3EE00BA57DB /* Chessboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chessboard.m; sourceTree = "<group>"; };
+		18CE20571E37073600BA57DB /* Pawn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pawn.h; sourceTree = "<group>"; };
+		18CE20581E37073600BA57DB /* Pawn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pawn.m; sourceTree = "<group>"; };
+		18CE205A1E37077500BA57DB /* Pawn+rule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pawn+rule.h"; sourceTree = "<group>"; };
+		18CE205B1E37077500BA57DB /* Pawn+rule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Pawn+rule.m"; sourceTree = "<group>"; };
 		4B8106D31C72F8A0004EE23E /* WZXMyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZXMyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B8106D71C72F8A0004EE23E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4B8106D91C72F8A0004EE23E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -135,6 +146,7 @@
 				4B8106DD1C72F8A0004EE23E /* ViewController.m */,
 				4B8106DF1C72F8A0004EE23E /* Main.storyboard */,
 				4B8106D61C72F8A0004EE23E /* Supporting Files */,
+				18CE20501E36EB0500BA57DB /* PrefixHeader.pch */,
 			);
 			path = WZXMyDemo;
 			sourceTree = "<group>";
@@ -142,6 +154,7 @@
 		4B8106D61C72F8A0004EE23E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18CE204F1E36EA6800BA57DB /* Singleton.h */,
 				4B8106E21C72F8A0004EE23E /* Assets.xcassets */,
 				4B8106E41C72F8A0004EE23E /* LaunchScreen.storyboard */,
 				4B8106E71C72F8A0004EE23E /* Info.plist */,
@@ -175,6 +188,8 @@
 				4B81071A1C731A0E004EE23E /* House+rule.m */,
 				1823B9261E360A3000F37390 /* Rook+rule.h */,
 				1823B9271E360A3000F37390 /* Rook+rule.m */,
+				18CE205A1E37077500BA57DB /* Pawn+rule.h */,
+				18CE205B1E37077500BA57DB /* Pawn+rule.m */,
 			);
 			name = Rule;
 			sourceTree = "<group>";
@@ -184,6 +199,8 @@
 			children = (
 				4B8107121C72FE70004EE23E /* Map.h */,
 				4B8107131C72FE70004EE23E /* Map.m */,
+				18CE20541E36F3EE00BA57DB /* Chessboard.h */,
+				18CE20551E36F3EE00BA57DB /* Chessboard.m */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -197,6 +214,8 @@
 				4B81070D1C72F931004EE23E /* House.m */,
 				1823B9201E360A0000F37390 /* Rook.h */,
 				1823B9211E360A0000F37390 /* Rook.m */,
+				18CE20571E37073600BA57DB /* Pawn.h */,
+				18CE20581E37073600BA57DB /* Pawn.m */,
 			);
 			name = Chess;
 			sourceTree = "<group>";
@@ -338,9 +357,12 @@
 				4B8106DE1C72F8A0004EE23E /* ViewController.m in Sources */,
 				1823B9281E360A3000F37390 /* Rook+rule.m in Sources */,
 				4B8106DB1C72F8A0004EE23E /* AppDelegate.m in Sources */,
+				18CE20561E36F3EE00BA57DB /* Chessboard.m in Sources */,
+				18CE20591E37073600BA57DB /* Pawn.m in Sources */,
 				4B81070E1C72F931004EE23E /* House.m in Sources */,
 				4B8106D81C72F8A0004EE23E /* main.m in Sources */,
 				4B81071B1C731A0E004EE23E /* House+rule.m in Sources */,
+				18CE205C1E37077500BA57DB /* Pawn+rule.m in Sources */,
 				4B8107181C731979004EE23E /* Chess+Move.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,7 +503,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 686TP5D9Q7;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/apple/GitHub/ChineseChess/WZXMyDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = WZXMyDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.NULL.WZXMyDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -493,7 +518,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 686TP5D9Q7;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/apple/GitHub/ChineseChess/WZXMyDemo/PrefixHeader.pch;
 				INFOPLIST_FILE = WZXMyDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.NULL.WZXMyDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

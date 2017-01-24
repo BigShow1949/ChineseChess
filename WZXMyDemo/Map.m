@@ -10,7 +10,10 @@
 #import "Chess.h"
 #import "House.h"
 #import "Move.h"
+
+
 @implementation Map
+
 
 - (instancetype)initWithStartPt:(CGPoint)pt andRowWidth:(CGFloat)rowWidth
 {
@@ -66,7 +69,7 @@
     
     //列
     NSInteger line = floor((pt.x - _rowWidth/2.0)  / _rowWidth) + 1 ;
-    
+        
     for (UIView * view in self.subviews)
     {
         if ([view isKindOfClass:[Chess class]])
@@ -80,8 +83,20 @@
             }
         }
     }
-    
-    NSLog(@"row:%ld line:%ld",row,line);
 }
+
+//- (void)layoutSubviews {
+//
+//    NSMutableArray *tempArr = [NSMutableArray array];
+//    for (UIView *view in self.subviews) {
+//        if ([view isKindOfClass:[Chess class]]) {
+//            Chess *chess = (Chess *)view;
+//            [tempArr addObject:chess];
+//        }
+//    }
+//    NSLog(@"layoutSubviews");
+//    self.chessArr = [NSArray arrayWithArray:tempArr];
+//}
+
 
 @end

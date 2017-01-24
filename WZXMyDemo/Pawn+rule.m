@@ -1,15 +1,17 @@
 //
-//  Rook+rule.m
+//  Pawn+rule.m
 //  WZXMyDemo
 //
-//  Created by apple on 17/1/23.
+//  Created by apple on 17/1/24.
 //  Copyright © 2017年 wzx. All rights reserved.
 //
 
-#import "Rook+rule.h"
+#import "Pawn+rule.h"
 #import "Chessboard.h"
 
-@implementation Rook (rule)
+@implementation Pawn (rule)
+
+
 - (BOOL)canMoveToIndex:(NSIndexPath *)index
 {
     NSInteger  toRow = index.row;
@@ -18,7 +20,7 @@
     NSInteger  fromLine = self.index.section;
     
     Chessboard *board = [Chessboard sharedChessboard];
-
+    
     if (ABS(toLine - fromLine) == 0 && toRow < fromRow) { // 向上
         NSLog(@"-- 上");
         for (int i = toRow+1; i < fromRow; i++) {
