@@ -9,9 +9,15 @@
 #import "Chess+Move.h"
 #import "Chessboard.h"
 
+#import "MessageManager.h"
 @implementation Chess (Move)
 
 - (void)moveToIndex:(NSIndexPath *)index completion:(void (^)())completion {
+    
+    // 发送消息
+    MessageManager *msgManager = [MessageManager sharedMessageManager];
+    [msgManager sendMessageMoveIndex:self.index toIndex:index];
+    
     [UIView animateWithDuration:0.5 animations:^{
     
         NSInteger  row = index.row;

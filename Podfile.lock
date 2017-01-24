@@ -1,0 +1,17 @@
+PODS:
+  - CocoaAsyncSocket (7.5.1):
+    - CocoaAsyncSocket/GCD (= 7.5.1)
+  - CocoaAsyncSocket/GCD (7.5.1)
+  - MBProgressHUD-YF (1.0.0)
+
+DEPENDENCIES:
+  - CocoaAsyncSocket (= 7.5.1)
+  - MBProgressHUD-YF (= 1.0.0)
+
+SPEC CHECKSUMS:
+  CocoaAsyncSocket: e0a7e93b2ffa411592ff87e58524fbbc9b95b4fa
+  MBProgressHUD-YF: 0fc6a8f0cb5028f34de62895e4bcf21a38fa02ca
+
+PODFILE CHECKSUM: 8126eeec7a95176b00d79e5d66f1bb6b99da4a6f
+
+COCOAPODS: 1.1.1
