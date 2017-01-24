@@ -9,12 +9,9 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger, ChessColor) {
-
     ChessColorRed   = 1,
     ChessColorBlack = 2,
 };
-
-
 
 @interface Chess : UIButton
 

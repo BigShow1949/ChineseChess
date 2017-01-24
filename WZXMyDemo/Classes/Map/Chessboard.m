@@ -32,13 +32,11 @@ singleton_implementation(Chessboard)
 }
 
 
-// - (BOOL)chessOnRow:(NSInteger)row section:(NSInteger)section
 - (Chess *)chessOnRow:(NSInteger)row section:(NSInteger)section {
     
     for (Chess *chess in self.chessArr) {
         
         if (chess.index.row == row && chess.index.section == section) {
-            NSLog(@"有:%@", chess);
             return chess;
             break;
         }
@@ -46,11 +44,7 @@ singleton_implementation(Chessboard)
     return nil;
 }
 
-//- (void)setSelectedChess:(Chess *)selectedChess {
-//
-//    selectedChess.isInAir = YES;
-//    _selectedChess = selectedChess;
-//}
+
 
 - (void)initChessboard {
     

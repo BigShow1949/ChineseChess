@@ -25,6 +25,7 @@
 		18A9A4721E37469D007C5DFA /* Pawn+rule.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A9A4601E37469C007C5DFA /* Pawn+rule.m */; };
 		18A9A4731E37469D007C5DFA /* Rook+rule.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A9A4621E37469C007C5DFA /* Rook+rule.m */; };
 		18A9A4791E37470F007C5DFA /* MessageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A9A4781E37470F007C5DFA /* MessageManager.m */; };
+		18E10CB81E375B7900388E9F /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E10CB71E375B7900388E9F /* Player.m */; };
 		4B8106D81C72F8A0004EE23E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8106D71C72F8A0004EE23E /* main.m */; };
 		4B8106DB1C72F8A0004EE23E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8106DA1C72F8A0004EE23E /* AppDelegate.m */; };
 		4B8106DE1C72F8A0004EE23E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8106DD1C72F8A0004EE23E /* ViewController.m */; };
@@ -92,6 +93,8 @@
 		18A9A4781E37470F007C5DFA /* MessageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageManager.m; sourceTree = "<group>"; };
 		18CE204F1E36EA6800BA57DB /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		18CE20501E36EB0500BA57DB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		18E10CB61E375B7900388E9F /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		18E10CB71E375B7900388E9F /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		4B8106D31C72F8A0004EE23E /* WZXMyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WZXMyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B8106D71C72F8A0004EE23E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4B8106D91C72F8A0004EE23E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -139,6 +142,7 @@
 		18A9A43C1E37469C007C5DFA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				18E10CB51E375B6500388E9F /* Player */,
 				18A9A43D1E37469C007C5DFA /* Chess */,
 				18A9A44E1E37469C007C5DFA /* Map */,
 				18A9A4531E37469C007C5DFA /* Message */,
@@ -209,6 +213,15 @@
 				18A9A4621E37469C007C5DFA /* Rook+rule.m */,
 			);
 			path = Rule;
+			sourceTree = "<group>";
+		};
+		18E10CB51E375B6500388E9F /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				18E10CB61E375B7900388E9F /* Player.h */,
+				18E10CB71E375B7900388E9F /* Player.m */,
+			);
+			path = Player;
 			sourceTree = "<group>";
 		};
 		4B8106CA1C72F8A0004EE23E = {
@@ -470,6 +483,7 @@
 				4B8106D81C72F8A0004EE23E /* main.m in Sources */,
 				18A9A4791E37470F007C5DFA /* MessageManager.m in Sources */,
 				18A9A4631E37469C007C5DFA /* Bishop.m in Sources */,
+				18E10CB81E375B7900388E9F /* Player.m in Sources */,
 				18A9A4731E37469D007C5DFA /* Rook+rule.m in Sources */,
 				18A9A46E1E37469D007C5DFA /* Cannon+rule.m in Sources */,
 				18A9A4661E37469D007C5DFA /* House.m in Sources */,

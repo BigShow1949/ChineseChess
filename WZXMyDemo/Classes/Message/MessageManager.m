@@ -33,15 +33,7 @@ singleton_implementation(MessageManager)
 // 接受数据
 - (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag{
     
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//        
-//        Chessboard *board = [Chessboard sharedChessboard];
-//        [board moveIndex:[NSIndexPath indexPathForRow:7 inSection:1] toIndex:[NSIndexPath indexPathForRow:7 inSection:0]];
-//    });
-    
-    NSLog(@"----1");
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-    NSLog(@"%@", dict);
     NSNumber *code = dict[@"code"];
     if (code.intValue == 1000) {
         

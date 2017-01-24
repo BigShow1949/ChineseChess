@@ -22,7 +22,6 @@ singleton_interface(Chessboard)
 
 - (void)initChessboard;
 
-
 - (void)moveIndex:(NSIndexPath *)fromIndex toIndex:(NSIndexPath *)toIndex;
 
 @end
