@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, ChessColor) {
+
+    ChessColorRed   = 1,
+    ChessColorBlack = 2,
+};
+
+
 
 @interface Chess : UIButton
 
@@ -15,7 +22,7 @@
 - (BOOL)canMoveToIndex:(NSIndexPath *)index;
 
 
-
+- (BOOL)canEatIndex:(NSIndexPath *)index;
 
 /**
  *  棋子上的Label
@@ -25,7 +32,7 @@
 /**
  *  棋子的类别 (红，黑)默认为红
  */
-@property (nonatomic,assign)BOOL isRed;
+@property (nonatomic,assign)ChessColor color;
 
 /**
  *  棋子的状态 (拿起，放下)默认为放下

@@ -8,9 +8,7 @@
 
 #import "Map.h"
 #import "Chess.h"
-#import "House.h"
-#import "Move.h"
-
+#import "Chess+Move.h"
 
 @implementation Map
 
@@ -78,25 +76,12 @@
             if (chess.isInAir) {
                 if ([chess canMoveToIndex:[NSIndexPath indexPathForRow:row inSection:line]])
                 {
-                    [chess moveToIndex:[NSIndexPath indexPathForRow:row inSection:line]];
+                    [chess moveToIndex:[NSIndexPath indexPathForRow:row inSection:line] completion:nil];
                 }
             }
         }
     }
 }
-
-//- (void)layoutSubviews {
-//
-//    NSMutableArray *tempArr = [NSMutableArray array];
-//    for (UIView *view in self.subviews) {
-//        if ([view isKindOfClass:[Chess class]]) {
-//            Chess *chess = (Chess *)view;
-//            [tempArr addObject:chess];
-//        }
-//    }
-//    NSLog(@"layoutSubviews");
-//    self.chessArr = [NSArray arrayWithArray:tempArr];
-//}
 
 
 @end

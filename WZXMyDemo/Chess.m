@@ -9,6 +9,7 @@
 #import "Chess.h"
 #import "Chessboard.h"
 
+#import "Chess+Move.h"
 
 @implementation Chess
 
@@ -34,19 +35,19 @@
         if (row > 4)
         {
             self.frame = CGRectMake(line * rowWidth - rowWidth/2.0, row * rowWidth - rowWidth/2.0, rowWidth, rowWidth);
-            _isRed = YES;
+             _color = ChessColorRed;
         }
         else
         {
             self.frame = CGRectMake(line * rowWidth - rowWidth/2.0, row * rowWidth - rowWidth/2.0, rowWidth, rowWidth);
-            _isRed = NO;
+            _color = ChessColorBlack;
         }
         
         self.categoryLabel = ({
         
             UILabel * categoryLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, rowWidth, rowWidth)];
-            
-            categoryLabel.textColor = _isRed == YES ? [UIColor redColor] : [UIColor blackColor];
+
+            categoryLabel.textColor = _color == ChessColorRed ? [UIColor redColor] : [UIColor blackColor];
             
             categoryLabel.textAlignment = NSTextAlignmentCenter;
             
@@ -70,19 +71,34 @@
     return self;
 }
 
+
 - (void)btnClick:(UIButton *)sender
 {
     Chessboard *board = [Chessboard sharedChessboard];
     
-    self.isInAir = !self.isInAir;
-    
-    if (self.isInAir) {
-        if (board.selectedChess) {
+    if (board.selectedChess) {
+        
+        if ([board.selectedChess isEqual:self]) { // 点的是自己
+            
+            self.isInAir = !self.isInAir;
+        }else if (board.selectedChess.color == self.color) { // 己方
+            
+
             board.selectedChess.isInAir = NO;
+            self.isInAir = YES;
+            board.selectedChess = self;
+        }else if (board.selectedChess.color != self.color) { // 敌方
+            
+            // 吃子
+            if ([board.selectedChess canEatIndex:self.index]) {
+                [board.selectedChess moveToIndex:self.index completion:^{
+                    [self removeFromSuperview];
+                }];
+            }
         }
-        board.selectedChess = self;
     }else {
-        board.selectedChess = nil;
+        self.isInAir = YES;
+        board.selectedChess = self;
     }
 }
 
@@ -100,10 +116,15 @@
     }
 }
 
-- (void)setIsRed:(BOOL)isRed
-{
-    _isRed = isRed;
-    _categoryLabel.textColor = _isRed == YES ? [UIColor redColor] : [UIColor blackColor];
+
+- (void)setColor:(ChessColor)color {
+
+    _color = color;
+    if (color == ChessColorRed) {
+        _categoryLabel.textColor = [UIColor redColor];
+    }else if (color == ChessColorBlack) {
+        _categoryLabel.textColor = [UIColor blackColor];
+    }
 }
 
 // 由子类实现 而且子类必须实现(怎么提示?)
@@ -112,6 +133,13 @@
     return NO;
 }
 
+// 默认是能移动就能吃
+- (BOOL)canEatIndex:(NSIndexPath *)index {
+    if ([self canMoveToIndex:index]) {
+        return YES;
+    }
+    return NO;
+}
 
 
 - (NSString *)description {

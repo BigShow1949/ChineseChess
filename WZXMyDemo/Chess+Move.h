@@ -10,6 +10,6 @@
 
 @interface Chess (Move)
 
-- (void)moveToIndex:(NSIndexPath *)index;
+- (void)moveToIndex:(NSIndexPath *)index completion:(void (^)())completion;
 
 @end

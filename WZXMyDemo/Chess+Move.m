@@ -11,10 +11,9 @@
 
 @implementation Chess (Move)
 
-- (void)moveToIndex:(NSIndexPath *)index
-{
+- (void)moveToIndex:(NSIndexPath *)index completion:(void (^)())completion {
     [UIView animateWithDuration:0.5 animations:^{
-        
+    
         NSInteger  row = index.row;
         
         NSInteger  line = index.section;
@@ -38,6 +37,10 @@
            
            Chessboard *board = [Chessboard sharedChessboard];
            board.selectedChess = nil;
+           
+           if (completion) {
+               completion();
+           }
            
        }];
 }

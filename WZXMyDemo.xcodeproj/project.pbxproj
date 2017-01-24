@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180E7FD51E37354C002D782C /* Bishop.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E7FD41E37354C002D782C /* Bishop.m */; };
+		180E7FD81E37357F002D782C /* Bishop+rule.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E7FD71E37357F002D782C /* Bishop+rule.m */; };
+		180E7FDB1E373656002D782C /* King.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E7FDA1E373656002D782C /* King.m */; };
+		180E7FDE1E37368A002D782C /* King+rule.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E7FDD1E37368A002D782C /* King+rule.m */; };
+		180E7FE11E3738B5002D782C /* Cannon.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E7FE01E3738B5002D782C /* Cannon.m */; };
+		180E7FE41E37390B002D782C /* Cannon+rule.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E7FE31E37390B002D782C /* Cannon+rule.m */; };
 		1823B9221E360A0000F37390 /* Rook.m in Sources */ = {isa = PBXBuildFile; fileRef = 1823B9211E360A0000F37390 /* Rook.m */; };
 		1823B9281E360A3000F37390 /* Rook+rule.m in Sources */ = {isa = PBXBuildFile; fileRef = 1823B9271E360A3000F37390 /* Rook+rule.m */; };
 		18CE20561E36F3EE00BA57DB /* Chessboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CE20551E36F3EE00BA57DB /* Chessboard.m */; };
@@ -45,6 +51,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		180E7FD31E37354C002D782C /* Bishop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bishop.h; sourceTree = "<group>"; };
+		180E7FD41E37354C002D782C /* Bishop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bishop.m; sourceTree = "<group>"; };
+		180E7FD61E37357F002D782C /* Bishop+rule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bishop+rule.h"; sourceTree = "<group>"; };
+		180E7FD71E37357F002D782C /* Bishop+rule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Bishop+rule.m"; sourceTree = "<group>"; };
+		180E7FD91E373656002D782C /* King.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = King.h; sourceTree = "<group>"; };
+		180E7FDA1E373656002D782C /* King.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = King.m; sourceTree = "<group>"; };
+		180E7FDC1E37368A002D782C /* King+rule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "King+rule.h"; sourceTree = "<group>"; };
+		180E7FDD1E37368A002D782C /* King+rule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "King+rule.m"; sourceTree = "<group>"; };
+		180E7FDF1E3738B5002D782C /* Cannon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cannon.h; sourceTree = "<group>"; };
+		180E7FE01E3738B5002D782C /* Cannon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cannon.m; sourceTree = "<group>"; };
+		180E7FE21E37390B002D782C /* Cannon+rule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Cannon+rule.h"; sourceTree = "<group>"; };
+		180E7FE31E37390B002D782C /* Cannon+rule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Cannon+rule.m"; sourceTree = "<group>"; };
 		1823B9201E360A0000F37390 /* Rook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rook.h; sourceTree = "<group>"; };
 		1823B9211E360A0000F37390 /* Rook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rook.m; sourceTree = "<group>"; };
 		1823B9261E360A3000F37390 /* Rook+rule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Rook+rule.h"; sourceTree = "<group>"; };
@@ -79,7 +97,6 @@
 		4B81070D1C72F931004EE23E /* House.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = House.m; sourceTree = "<group>"; };
 		4B8107121C72FE70004EE23E /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
 		4B8107131C72FE70004EE23E /* Map.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Map.m; sourceTree = "<group>"; };
-		4B8107151C730DD4004EE23E /* Move.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Move.h; sourceTree = "<group>"; };
 		4B8107161C731979004EE23E /* Chess+Move.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Chess+Move.h"; sourceTree = "<group>"; };
 		4B8107171C731979004EE23E /* Chess+Move.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Chess+Move.m"; sourceTree = "<group>"; };
 		4B8107191C731A0E004EE23E /* House+rule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "House+rule.h"; sourceTree = "<group>"; };
@@ -139,7 +156,6 @@
 				4B81071C1C731A16004EE23E /* Rule */,
 				4B8107161C731979004EE23E /* Chess+Move.h */,
 				4B8107171C731979004EE23E /* Chess+Move.m */,
-				4B8107151C730DD4004EE23E /* Move.h */,
 				4B8106D91C72F8A0004EE23E /* AppDelegate.h */,
 				4B8106DA1C72F8A0004EE23E /* AppDelegate.m */,
 				4B8106DC1C72F8A0004EE23E /* ViewController.h */,
@@ -190,6 +206,12 @@
 				1823B9271E360A3000F37390 /* Rook+rule.m */,
 				18CE205A1E37077500BA57DB /* Pawn+rule.h */,
 				18CE205B1E37077500BA57DB /* Pawn+rule.m */,
+				180E7FD61E37357F002D782C /* Bishop+rule.h */,
+				180E7FD71E37357F002D782C /* Bishop+rule.m */,
+				180E7FDC1E37368A002D782C /* King+rule.h */,
+				180E7FDD1E37368A002D782C /* King+rule.m */,
+				180E7FE21E37390B002D782C /* Cannon+rule.h */,
+				180E7FE31E37390B002D782C /* Cannon+rule.m */,
 			);
 			name = Rule;
 			sourceTree = "<group>";
@@ -216,6 +238,12 @@
 				1823B9211E360A0000F37390 /* Rook.m */,
 				18CE20571E37073600BA57DB /* Pawn.h */,
 				18CE20581E37073600BA57DB /* Pawn.m */,
+				180E7FD31E37354C002D782C /* Bishop.h */,
+				180E7FD41E37354C002D782C /* Bishop.m */,
+				180E7FD91E373656002D782C /* King.h */,
+				180E7FDA1E373656002D782C /* King.m */,
+				180E7FDF1E3738B5002D782C /* Cannon.h */,
+				180E7FE01E3738B5002D782C /* Cannon.m */,
 			);
 			name = Chess;
 			sourceTree = "<group>";
@@ -351,18 +379,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180E7FD81E37357F002D782C /* Bishop+rule.m in Sources */,
 				4B81070B1C72F8DE004EE23E /* Chess.m in Sources */,
+				180E7FE41E37390B002D782C /* Cannon+rule.m in Sources */,
 				4B8107141C72FE70004EE23E /* Map.m in Sources */,
 				1823B9221E360A0000F37390 /* Rook.m in Sources */,
 				4B8106DE1C72F8A0004EE23E /* ViewController.m in Sources */,
 				1823B9281E360A3000F37390 /* Rook+rule.m in Sources */,
+				180E7FE11E3738B5002D782C /* Cannon.m in Sources */,
+				180E7FDE1E37368A002D782C /* King+rule.m in Sources */,
 				4B8106DB1C72F8A0004EE23E /* AppDelegate.m in Sources */,
 				18CE20561E36F3EE00BA57DB /* Chessboard.m in Sources */,
 				18CE20591E37073600BA57DB /* Pawn.m in Sources */,
 				4B81070E1C72F931004EE23E /* House.m in Sources */,
+				180E7FDB1E373656002D782C /* King.m in Sources */,
 				4B8106D81C72F8A0004EE23E /* main.m in Sources */,
 				4B81071B1C731A0E004EE23E /* House+rule.m in Sources */,
 				18CE205C1E37077500BA57DB /* Pawn+rule.m in Sources */,
+				180E7FD51E37354C002D782C /* Bishop.m in Sources */,
 				4B8107181C731979004EE23E /* Chess+Move.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
